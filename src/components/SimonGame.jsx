@@ -96,6 +96,7 @@ function SimonGame() {
 
     return(      
         //Main container
+        <>
         <div className="flex justify-center 
         items-center 
         bg-neutral-800 
@@ -103,8 +104,12 @@ function SimonGame() {
         text-white">
                 {/*Game Container */}
                 <div className="relative flex flex-col justify-center items-center">
+                
+                <h1 className="text-white text-xl sm:text-2xl font-bold rounded-full">Test</h1>   
+                <div className=""><br/></div>
+                       
                     {/*Green and Red Container*/}
-                    <div>
+                    <div className="relative">
                         {/*GREEN BUTTON*/}
                         <GameBtn 
                         color="green"
@@ -123,7 +128,7 @@ function SimonGame() {
                         ref={redRef}/>
                     </div>
                     {/*Yellow and Blue Container*/}
-                    <div>
+                    <div className="relative">
                         {/**YELLOW BUTTON */}
                         <GameBtn 
                         color="yellow"
@@ -140,14 +145,15 @@ function SimonGame() {
                         onClick={handleColorClick}
                         ref={blueRef}/>
                     </div>
+                    <br/>
                     {/*Play button */}
-                    <button className="absolute bg-neutral-900 text-white text-xl sm:text-2xl font-bold rounded-full w-[150px] sm:w-[175px] h-[150px] 
+                    <button className="absolute bg-neutral-900 border text-white text-xl sm:text-2xl font-bold rounded-full w-[150px] sm:w-[175px] h-[150px] 
                     sm:h-[175px] duration-200 hover:scale-105" 
                     onClick={handleNextLevel}>
                     {sequence.length === 0 ? "Play" : sequence.length} </button>
                 </div>
         </div>
-    
+        </>
     );
 }
 
